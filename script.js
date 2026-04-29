@@ -49,7 +49,7 @@ function finalizarCompra() {
     let temCupom = document.getElementById("cupom").value === "sim";
     let desconto = 0;
 
-    if (temCupom && valorComTaxas < 100000) {
+    if (temCupom && valorComTaxas < 100) {
         desconto = 10;
     }
 
