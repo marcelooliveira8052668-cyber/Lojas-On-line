@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Loja Online Profissional</h1>
+
+    <div class="container">
+        <!-- VITRINE DE PRODUTOS -->
+        <div class="produtos">
+            <div class="produto">
+                <h3>Camiseta Premium</h3>
+                <p>R$ 59,90</p>
+                <button class="btn-add" onclick="adicionar('Camiseta Premium', 59.90, 'VESTUARIO')">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="produto">
+                <h3>Notebook Gamer</h3>
+                <p>R$ 3500,00</p>
+                <button class="btn-add" onclick="adicionar('Notebook Gamer', 3500, 'ELETRONICO')">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="produto">
+                <h3>Cesta de Alimentos</h3>
+                <p>R$ 89,90</p>
+                <button class="btn-add" onclick="adicionar('Cesta de Alimentos', 89.90, 'ALIMENTO')">
+                    Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- SEÇÃO DO CARRINHO -->
+        <div class="carrinho">
+            <h2>Seu Carrinho</h2>
+            <ul id="listaCarrinho"></ul>
+
+            <p class="total">Total Base: R$ <span id="total">0.00</span></p>
+
+            <label>Possui Cupom?</label>
+            <select id="cupom">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+
+            <button class="btn-finalizar" onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+
+            <!-- RECIBO FINAL -->
+            <div class="resultado" id="resultado">
+                <p id="precoFinal"></p>
+                <p id="taxasFinal"></p>
+                <p id="descontoFinal"></p>
+                <hr>
+                <p id="valorTotalFinal" style="font-weight: bold; color: #27ae60;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
