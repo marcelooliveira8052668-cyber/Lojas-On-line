@@ -45,11 +45,11 @@ function finalizarCompra() {
         valorComTaxas += item.preco + taxaItem;
     });
 
-    // 2. Lógica do Cupom (SÓ desconta se marcar SIM e total for > 100)
+    // 2. Lógica do Cupom (SÓ desconta se marcar SIM e total for < 100000)
     let temCupom = document.getElementById("cupom").value === "sim";
     let desconto = 0;
 
-    if (temCupom && valorComTaxas < 100) {
+    if (temCupom && valorComTaxas < 100000) {
         desconto = 10;
     }
 
