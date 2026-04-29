@@ -115,3 +115,19 @@ select {
     display: none;
     border-left: 5px solid #2c3e50;
 }
+
+/* Adicione isso junto aos outros botões no style.css */
+button[onclick="limparCarrinho()"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button[onclick="limparCarrinho()"]:hover {
+    background: #c0392b !important;
+}
